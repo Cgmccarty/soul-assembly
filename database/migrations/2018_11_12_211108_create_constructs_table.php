@@ -21,7 +21,7 @@ class CreateConstructsTable extends Migration
             $table->foreign('attribute_id')->references('id')->on('attributes');
             $table->unsignedInteger('equipment_id');
             $table->foreign('equipment_id')->references('id')->on('equipment');
-            $table->unsignedInteger('attribute_id');
+            $table->unsignedInteger('magic_id');
             $table->foreign('magic_id')->references('id')->on('magics');
             $table->timestamps();
         });

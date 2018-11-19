@@ -20,9 +20,8 @@ class CreateAttributesTable extends Migration
             $table->string('title', 100);
             $table->unsignedInteger('class_id');
             $table->foreign('class_id')->references('id')->on('classes');
-            $table->string('gender', 1);
-            $table->unsignedInteger('soul_level');
             $table->enum('gender', ['M', 'F']);
+            $table->unsignedInteger('soul_level');
             $table->timestamps();
         });
     }
