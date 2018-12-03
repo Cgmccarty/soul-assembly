@@ -8,7 +8,8 @@
 
 @if (Auth::user()->constructs->count() == 0)
 
-<p>You currently have no constructs to display. Please create one by opening the menu and clicking 'New Construct'!</p>
+<p>You currently have no constructs to display.</p>
+<p>Please create one by opening the menu and clicking 'New Construct'!</p>
 
 @else
 
