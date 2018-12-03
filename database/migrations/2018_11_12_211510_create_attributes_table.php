@@ -17,11 +17,14 @@ class CreateAttributesTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('construct_id');
             $table->foreign('construct_id')->references('id')->on('constructs');
-            $table->string('title', 100);
-            $table->unsignedInteger('class_id');
-            $table->foreign('class_id')->references('id')->on('classes');
-            $table->enum('gender', ['M', 'F']);
-            $table->unsignedInteger('soul_level');
+            $table->unsignedSmallInteger('Vgr');
+            $table->unsignedSmallInteger('Atn');
+            $table->unsignedSmallInteger('End');
+            $table->unsignedSmallInteger('Str');
+            $table->unsignedSmallInteger('Dex');
+            $table->unsignedSmallInteger('Int');
+            $table->unsignedSmallInteger('Fth');
+            $table->unsignedSmallInteger('Luck');
             $table->timestamps();
         });
     }

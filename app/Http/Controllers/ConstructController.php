@@ -34,7 +34,18 @@ class ConstructController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $con = new \App\Construct;
+        $con->user_id = \Auth::id();
+        $con->title = $request->input('title_input');
+        $con->class = $request->input('class_input');
+        $con->gender = $request->input('gender_input');
+        $con->gift = $request->input('gift_input');
+        $con->covenant = $request->input('cov_input');
+        $con->soul_level = $request->input('soul_input');
+        $con->save();
+
+        $request->session()->flash('status', 'Your construct was saved.');
+        return view('constructs.index');
     }
 
     /**
@@ -45,7 +56,7 @@ class ConstructController extends Controller
      */
     public function show($id)
     {
-        //
+        return 'This view will display an in-depth look at a specific construct';
     }
 
     /**
@@ -56,7 +67,8 @@ class ConstructController extends Controller
      */
     public function edit($id)
     {
-        //
+        $con = \App\Construct::find($id);
+        return view('constructs.edit', compact('con'));
     }
 
     /**
@@ -68,7 +80,18 @@ class ConstructController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $con = \App\Construct::find($id);
+        $con->title = $request->input('title_input');
+        $con->class = $request->input('class_input');
+        $con->gender = $request->input('gender_input');
+        $con->gift = $request->input('gift_input');
+        $con->covenant = $request->input('cov_input');
+        $con->soul_level = $request->input('soul_input');
+        $con->save();
+
+        $request->session()->flash('status', 'Your construct was updated.');
+        return view('constructs.index');
+
     }
 
     /**
@@ -77,8 +100,11 @@ class ConstructController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request, $id)
     {
-        //
+        $con = \App\Construct::find($id);
+        $con->delete();
+        $request->session()->flash('status', 'Your construct was deleted.');
+        return view('constructs.index');
     }
 }

@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('constructs', 'ConstructController');
+Route::resource('constructs', 'ConstructController')->middleware('auth');
 
 Route::get('/intro', function () {
     return view('intro');
@@ -23,4 +23,4 @@ Route::get('/intro', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');

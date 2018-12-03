@@ -8,13 +8,17 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+[v-cloak] {
+  display: none;
+}
+
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
 .container, body {
-  background: url(https://cdnb.artstation.com/p/assets/images/images/005/684/301/original/egor-egorov-output-sweuij.gif?1493004504) no-repeat -130px 250px;
+  // background: url(https://cdnb.artstation.com/p/assets/images/images/005/684/301/original/egor-egorov-output-sweuij.gif?1493004504) no-repeat -130px 250px;
   background-size: 500px 500px;
   background-color: black;
   background-position: absolute;
@@ -43,6 +47,15 @@ h3 {
 p {
   margin-left: -13px;
   font-size: 16px;
+}
+
+.delete {
+    background-color: #4444;
+    border: none;
+}
+
+#main {
+    transition: .5s;
 }
 
 .navbtn > a {

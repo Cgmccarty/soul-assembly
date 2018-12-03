@@ -6,6 +6,7 @@
 
 @section('content')
 <form class="form" action="/constructs" method="post">
+    @method('PUT')
     @csrf
     <div class="row">
 
@@ -13,28 +14,28 @@
             <div id="classSelect" class="pb-3">
                 <div class="row no-gutters">
                     <label id="titleLabel" for="title_input" class="col my-1">Name</label>
-                    <input id="title_input" type="text" name="title_input" placeholder="Name here..." class="input text-truncate text-dark" required>
+                    <input id="title_input" type="text" name="title_input" placeholder="Name here..." class="input text-truncate text-dark" value="{{ $con->title }}" required>
                 </div>
                 <div class="row no-gutters">
                     <label id="classLabel" for="class_input" class="col my-1">Class</label>
                     <select id="class_input" class="input text-dark" name="class_input" required>
-                        <option value="Knight">Knight</option>
-                        <option value="Mercenary">Mercenary</option>
-                        <option value="Warrior">Warrior</option>
-                        <option value="Herald">Herald</option>
-                        <option value="Thief">Thief</option>
-                        <option value="Assassin">Assassin</option>
-                        <option value="Sorcerer">Sorcerer</option>
-                        <option value="Pyromancer">Pyromancer</option>
-                        <option value="Cleric">Cleric</option>
-                        <option value="Deprived">Deprived</option>
+                        <option value="Knight" @if($con->class === "Knight") selected='selected' @endif>Knight</option>
+                        <option value="Mercenary" @if($con->class === "Mercenary") selected='selected' @endif>Mercenary</option>
+                        <option value="Warrior" @if($con->class === "Warrior") selected='selected' @endif>Warrior</option>
+                        <option value="Herald" @if($con->class === "Herald") selected='selected' @endif>Herald</option>
+                        <option value="Thief" @if($con->class === "Thief") selected='selected' @endif>Thief</option>
+                        <option value="Assassin" @if($con->class === "Assassin") selected='selected' @endif>Assassin</option>
+                        <option value="Sorcerer" @if($con->class === "Sorcerer") selected='selected' @endif>Sorcerer</option>
+                        <option value="Pyromancer" @if($con->class === "Pyromancer") selected='selected' @endif>Pyromancer</option>
+                        <option value="Cleric" @if($con->class === "Cleric") selected='selected' @endif>Cleric</option>
+                        <option value="Deprived" @if($con->class === "Deprived") selected='selected' @endif>Deprived</option>
                     </select>
                 </div>
                 <div class="row no-gutters">
                     <label id="genderLabel" for="gender_input" class="col my-1">Gender</label>
                     <select id="gender_input" class="input text-dark" name="gender_input" required>
-                        <option value="M">Male</option>
-                        <option value="F">Female</option>
+                        <option value="M" @if($con->gender === "M") selected='selected' @endif>Male</option>
+                        <option value="F" @if($con->gender === "F") selected='selected' @endif>Female</option>
                     </select>
                 </div>
                 <div class="row no-gutters">
@@ -47,15 +48,15 @@
                     <img style="height: 25px; width: 25px; border-radius: 3px;" src="http://darksouls3.wdfiles.com/local--files/image-sets:menu-icons/covenant.png"></img>
                     <label id="covLabel" for="cov_input" class="col ml-1 my-1">Covenant</label>
                     <select id="cov_input" class="input text-truncate text-dark" name="cov_input">
-                        <option value="warriorsofsunlight">Warriors of Sunlight</option>
-                        <option value="wayofblue">Way of Blue</option>
-                        <option value="bluesentinels">Blue Sentinels</option>
-                        <option value="bladesofthedarkmoon">Blades of the Darkmoon</option>
-                        <option value="rosariasfingers">Rosarias Fingers</option>
-                        <option value="moundmaker">Mound Maker</option>
-                        <option value="watchdogsoffarron">Watchdogs of Farron</option>
-                        <option value="aldrichfaithful">Aldrich Faithful</option>
-                        <option value="spearsofthechurch">Spears of the Church</option>
+                        <option value="warriorsofsunlight" @if($con->covenant === "warriorsofsunlight") selected='selected' @endif>Warriors of Sunlight</option>
+                        <option value="wayofblue" @if($con->covenant === "wayofblue") selected='selected' @endif>Way of Blue</option>
+                        <option value="bluesentinels" @if($con->covenant === "bluesentinels") selected='selected' @endif>Blue Sentinels</option>
+                        <option value="bladesofthedarkmoon" @if($con->covenant === "bladesofthedarkmoon") selected='selected' @endif>Blades of the Darkmoon</option>
+                        <option value="rosariasfingers" @if($con->covenant === "rosariasfingers") selected='selected' @endif>Rosarias Fingers</option>
+                        <option value="moundmaker" @if($con->covenant === "moundmaker") selected='selected' @endif>Mound Maker</option>
+                        <option value="watchdogsoffarron" @if($con->covenant === "watchdogsoffarron") selected='selected' @endif>Watchdogs of Farron</option>
+                        <option value="aldrichfaithful" @if($con->covenant === "aldrichfaithful") selected='selected' @endif>Aldrich Faithful</option>
+                        <option value="spearsofthechurch" @if($con->covenant === "spearsofthechurch") selected='selected' @endif>Spears of the Church</option>
                     </select>
                 </div>
             </div>
@@ -154,33 +155,29 @@
                 <div class="row no-gutters">
                     <img class="col" src="{{ asset('icons/visored-helm.png') }}"></img>
                     <label for="head_input" class="col ml-1 my-1">Head</label>
-                    <select v-model="selectHelmet" id="head_input" name="head_input" class="input armor text-truncate text-dark">
-                        <option value="null">None</option>
-                        <option v-for="armor in armors" :value="armor.name">@{{ armor.name }}</option>
+                    <select disabled id="head_input" name="head_input" class="input armor text-truncate text-dark">
+                        <option>None</option>
                     </select>
                 </div>
                 <div class="row no-gutters">
                     <img class="col" src="{{ asset('icons/breastplate.png') }}"></img>
                     <label for="chest_input" class="col ml-1 my-1">Chest</label>
-                    <select v-model="selectChest" id="chest_input" name="chest_input" class="input armor text-truncate text-dark">
-                        <option value="null">None</option>
-                        <option v-for="armor in armors" :value="armor.name">@{{ armor.name }}</option>
+                    <select disabled id="chest_input" name="chest_input" class="input armor text-truncate text-dark">
+                        <option>None</option>
                     </select>
                 </div>
                 <div class="row no-gutters">
                     <img class="col" src="{{ asset('icons/gauntlet.png') }}"></img>
                     <label for="hands_input" class="col ml-1 my-1">Hands</label>
-                    <select v-model="selectHands" id="hands_input" name="hands_input" class="input armor text-truncate text-dark">
-                        <option value="null">None</option>
-                        <option v-for="armor in armors" :value="armor.name">@{{ armor.name }}</option>
+                    <select disabled id="hands_input" name="hands_input" class="input armor text-truncate text-dark">
+                        <option>None</option>
                     </select>
                 </div>
                 <div class="row no-gutters">
                     <img class="col" src="{{ asset('icons/leg-armor.png') }}"></img>
                     <label for="legs_input" class="col ml-1 my-1">Legs</label>
-                    <select v-model="selectLegs" id="legs_input" name="legs_input" class="input armor text-truncate text-dark">
-                        <option value="null">None</option>
-                        <option v-for="armor in armors" :value="armor.name">@{{ armor.name }}</option>
+                    <select disabled id="legs_input" name="legs_input" class="input armor text-truncate text-dark">
+                        <option>None</option>
                     </select>
                 </div>
             </div>
@@ -189,33 +186,29 @@
                 <div class="row no-gutters">
                     <img class="col" src="{{ asset('icons/power-ring.png') }}"></img>
                     <label for="ring1_input" class="col ml-1 my-1">Ring 1</label>
-                    <select v-model="selectRing1" id="ring1_input" name="ring1_input" class="input armor text-truncate text-dark">
-                        <option value="null">None</option>
-                        <option v-for="ring in rings" :value="ring.name">@{{ ring.name }}</option>
+                    <select disabled id="ring1_input" name="ring1_input" class="input armor text-truncate text-dark">
+                        <option>None</option>
                     </select>
                 </div>
                 <div class="row no-gutters">
                     <img class="col" src="{{ asset('icons/power-ring.png') }}"></img>
                     <label for="ring2_input" class="col ml-1 my-1">Ring 2</label>
-                    <select v-model="selectRing2" id="ring2_input" name="ring2_input" class="input armor text-truncate text-dark">
-                        <option value="null">None</option>
-                        <option v-for="ring in rings" :value="ring.name">@{{ ring.name }}</option>
+                    <select disabled id="ring2_input" name="ring2_input" class="input armor text-truncate text-dark">
+                        <option>None</option>
                     </select>
                 </div>
                 <div class="row no-gutters">
                     <img class="col" src="{{ asset('icons/power-ring.png') }}"></img>
                     <label for="ring3_input" class="col ml-1 my-1">Ring 3</label>
-                    <select v-model="selectRing3" id="ring3_input" name="ring3_input" class="input armor text-truncate text-dark">
-                        <option value="null">None</option>
-                        <option v-for="ring in rings" :value="ring.name">@{{ ring.name }}</option>
+                    <select disabled id="ring3_input" name="ring3_input" class="input armor text-truncate text-dark">
+                        <option>None</option>
                     </select>
                 </div>
                 <div class="row no-gutters">
                     <img class="col" src="{{ asset('icons/power-ring.png') }}"></img>
                     <label for="ring4_input" class="col ml-1 my-1">Ring 4</label>
-                    <select v-model="selectRing4" id="ring4_input" name="ring4_input" class="input armor text-truncate text-dark">
-                        <option value="null">None</option>
-                        <option v-for="ring in rings" :value="ring.name">@{{ ring.name }}</option>
+                    <select disabled id="ring4_input" name="ring4_input" class="input armor text-truncate text-dark">
+                        <option>None</option>
                     </select>
                 </div>
             </div>
@@ -228,9 +221,8 @@
                             <label for="lh1_input" class="col ml-1 my-1">LH 1</label>
                         </div>
                         <div class="row no-gutters">
-                            <select v-model="selectLH1" id="lh1_input" name="lh1_input" class="input weapon col text-truncate text-dark">
-                                <option value="null">None</option>
-                                <option v-for="weapon in weapons" :value="weapon.name">@{{ weapon.name }}</option>
+                            <select disabled id="lh1_input" name="lh1_input" class="input weapon col text-truncate text-dark">
+                                <option>None</option>
                             </select>
                         </div>
                     </div>
@@ -240,9 +232,8 @@
                             <label for="rh1_input" class="col ml-1 my-1">RH 1</label>
                         </div>
                         <div class="row no-gutters">
-                            <select v-model="selectRH1" id="rh1_input" name="rh1_input" class="input weapon col text-truncate text-dark">
-                                <option value="null">None</option>
-                                <option v-for="weapon in weapons" :value="weapon.name">@{{ weapon.name }}</option>
+                            <select disabled id="rh1_input" name="rh1_input" class="input weapon col text-truncate text-dark">
+                                <option>None</option>
                             </select>
                         </div>
                     </div>
@@ -254,9 +245,8 @@
                             <label for="lh2_input" class="col ml-1 my-1">LH 2</label>
                         </div>
                         <div class="row no-gutters">
-                            <select v-model="selectLH2" id="lh2_input" name="lh2_input" class="input weapon col text-truncate text-dark">
-                                <option value="null">None</option>
-                                <option v-for="weapon in weapons" :value="weapon.name">@{{ weapon.name }}</option>
+                            <select disabled id="lh2_input" name="lh2_input" class="input weapon col text-truncate text-dark">
+                                <option>None</option>
                             </select>
                         </div>
                     </div>
@@ -266,9 +256,8 @@
                             <label for="rh2_input" class="col ml-1 my-1">RH 2</label>
                         </div>
                         <div class="row no-gutters">
-                            <select v-model="selectRH2" id="rh2_input" name="rh2_input" class="input weapon col text-truncate text-dark">
-                                <option value="null">None</option>
-                                <option v-for="weapon in weapons" :value="weapon.name">@{{ weapon.name }}</option>
+                            <select disabled id="rh2_input" name="rh2_input" class="input weapon col text-truncate text-dark">
+                                <option>None</option>
                             </select>
                         </div>
                     </div>
@@ -280,9 +269,8 @@
                             <label for="lh3_input" class="col ml-1 my-1">LH 3</label>
                         </div>
                         <div class="row no-gutters">
-                            <select v-model="selectLH3" id="lh3_input" name="lh3_input" class="input weapon col text-truncate text-dark">
-                                <option value="null">None</option>
-                                <option v-for="weapon in weapons" :value="weapon.name">@{{ weapon.name }}</option>
+                            <select disabled id="lh3_input" name="lh3_input" class="input weapon col text-truncate text-dark">
+                                <option>None</option>
                             </select>
                         </div>
                     </div>
@@ -292,9 +280,8 @@
                             <label for="rh3_input" class="col ml-1 my-1">RH 3</label>
                         </div>
                         <div class="row no-gutters">
-                            <select v-model="selectRH3" id="rh3_input" name="rh3_input" class="input weapon col text-truncate text-dark">
-                                <option value="null">None</option>
-                                <option v-for="weapon in weapons" :value="weapon.name">@{{ weapon.name }}</option>
+                            <select disabled id="rh3_input" name="rh3_input" class="input weapon col text-truncate text-dark">
+                                <option>None</option>
                             </select>
                         </div>
                     </div>
