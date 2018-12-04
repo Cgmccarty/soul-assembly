@@ -46,7 +46,7 @@ h3 {
 
 p {
   margin-left: -13px;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .delete {
@@ -82,6 +82,7 @@ p {
 .card {
     border: 3px #9E937B;
     border-style: ridge groove ridge;
+    min-width: 310px;
 }
 
 .navbtn {
@@ -221,7 +222,9 @@ img.col {
     border-style: ridge groove ridge;
     background-color: #444;
     transition: 0.1s;
-    margin-left: -85px;
+    position: absolute;
+    top: 0;
+    left: 15px;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */

@@ -42,6 +42,30 @@ class ConstructController extends Controller
         $con->gift = $request->input('gift_input');
         $con->covenant = $request->input('cov_input');
         $con->soul_level = $request->input('soul_input');
+        $con->Vgr = $request->input('vgr');
+        $con->Atn = $request->input('atn');
+        $con->End = $request->input('end');
+        $con->Vit = $request->input('vit');
+        $con->Str = $request->input('str');
+        $con->Dex = $request->input('dex');
+        $con->Int = $request->input('int');
+        $con->Fth = $request->input('fth');
+        $con->Luck = $request->input('luck');
+        $con->Hol = $request->input('hol');
+        $con->head = $request->input('head_input');
+        $con->chest = $request->input('chest_input');
+        $con->hands = $request->input('hands_input');
+        $con->legs = $request->input('legs_input');
+        $con->ring1 = $request->input('ring1_input');
+        $con->ring2 = $request->input('ring2_input');
+        $con->ring3 = $request->input('ring3_input');
+        $con->ring4 = $request->input('ring4_input');
+        $con->lh1 = $request->input('lh1_input');
+        $con->lh2 = $request->input('lh2_input');
+        $con->lh3 = $request->input('lh3_input');
+        $con->rh1 = $request->input('rh1_input');
+        $con->rh2 = $request->input('rh2_input');
+        $con->rh3 = $request->input('rh3_input');
         $con->save();
 
         $request->session()->flash('status', 'Your construct was saved.');
@@ -56,7 +80,8 @@ class ConstructController extends Controller
      */
     public function show($id)
     {
-        return 'This view will display an in-depth look at a specific construct';
+        $con = \App\Construct::find($id);
+        return view('constructs.display', compact('con'));
     }
 
     /**
@@ -87,6 +112,30 @@ class ConstructController extends Controller
         $con->gift = $request->input('gift_input');
         $con->covenant = $request->input('cov_input');
         $con->soul_level = $request->input('soul_input');
+        $con->Vgr = $request->input('vgr');
+        $con->Atn = $request->input('atn');
+        $con->End = $request->input('end');
+        $con->Vit = $request->input('vit');
+        $con->Str = $request->input('str');
+        $con->Dex = $request->input('dex');
+        $con->Int = $request->input('int');
+        $con->Fth = $request->input('fth');
+        $con->Luck = $request->input('luck');
+        $con->Hol = $request->input('hol');
+        $con->head = $request->input('head_input');
+        $con->chest = $request->input('chest_input');
+        $con->hands = $request->input('hands_input');
+        $con->legs = $request->input('legs_input');
+        $con->ring1 = $request->input('ring1_input');
+        $con->ring2 = $request->input('ring2_input');
+        $con->ring3 = $request->input('ring3_input');
+        $con->ring4 = $request->input('ring4_input');
+        $con->lh1 = $request->input('lh1_input');
+        $con->lh2 = $request->input('lh2_input');
+        $con->lh3 = $request->input('lh3_input');
+        $con->rh1 = $request->input('rh1_input');
+        $con->rh2 = $request->input('rh2_input');
+        $con->rh3 = $request->input('rh3_input');
         $con->save();
 
         $request->session()->flash('status', 'Your construct was updated.');
@@ -105,6 +154,6 @@ class ConstructController extends Controller
         $con = \App\Construct::find($id);
         $con->delete();
         $request->session()->flash('status', 'Your construct was deleted.');
-        return view('constructs.index');
+        return redirect()->route('home');
     }
 }

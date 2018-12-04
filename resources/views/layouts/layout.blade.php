@@ -13,16 +13,17 @@
   </head>
   <body class="container">
 
-    <div id="app" v-cloak>
+    <div id="app" class="m-3" v-cloak>
         @include('navigation')
 
-        @if (session('status'))
-        <div class="alert alert-success" role="alert">
-            {{ session('status') }}
-        </div>
-        @endif
-
         <div id="main">
+
+            @if (session('status'))
+            <div class="alert alert-success" role="alert">
+                {{ session('status') }}
+            </div>
+            @endif
+
             <h1 class="row pageTitle">@yield('title')</h1>
             @yield('content')
         </div>

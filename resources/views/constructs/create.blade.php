@@ -40,7 +40,16 @@
                 <div class="row no-gutters">
                     <label id="giftLabel" for="gift_input" class="col my-1">Gift</label>
                     <select id="gift_input" class="input text-dark" name="gift_input">
-                        <option>None</option>
+                        <option value="null">None</option>
+                        <option value="lifering">Life Ring</option>
+                        <option value="divineblessing">Divine Blessing</option>
+                        <option value="hiddenblessing">Hidden Blessing</option>
+                        <option value="blackfirebomb">Black Firebomb</option>
+                        <option value="firegem">Fire Gem</option>
+                        <option value="sovereignlesssoul">Sovereignless Soul</option>
+                        <option value="goldcoin">Gold Coin</option>
+                        <option value="crackedredeyeorb">Cracked Red Eye Orb</option>
+                        <option value="youngwhitebranch">Young White Branch</option>
                     </select>
                 </div>
                 <div class="row no-gutters">
@@ -71,67 +80,67 @@
                     <img style="height: 25px; width: 25px; border-radius: 3px;" src="http://darksouls3.wdfiles.com/local--files/image-sets:menu-icons/level.png"></img>
                     <label id="soulLabel" for="soul_input" class="col ml-1 my-1">Soul Level</label>
                     <input disabled id="soulBase" type="number" value="10" class="input col parameter base mr-2 text-light">
-                    <input id="soul_input" name="soul_input" type="number" value="10" class="input col parameter base text-light">
+                    <input id="soul_input" name="soul_input" type="number" value="10" class="input col parameter base text-light" required>
                 </div>
                 <div class="row no-gutters">
                     <img style="height: 25px; width: 25px; border-radius: 3px;" src="http://darksouls3.wdfiles.com/local--files/image-sets:menu-icons/vigor.png"></img>
                     <label for="vgr" class="col ml-1 my-1">Vigor</label>
                     <input disabled id="vgrBase" value="10" type="number" class="input col parameter base mr-2 text-light">
-                    <input disabled id="vgr" name="vgr" type="number" value="10" class="input col parameter text-dark">
+                    <input id="vgr" name="vgr" type="number" value="10" class="input col parameter text-dark" required>
                 </div>
                 <div class="row no-gutters">
                     <img style="height: 25px; width: 25px; border-radius: 3px;" src="http://darksouls3.wdfiles.com/local--files/image-sets:menu-icons/attunement.png"></img>
                     <label for="atn" class="col ml-1 my-1">Attunement</label>
                     <input disabled id="atnBase" value="10" type="number" class="input col parameter base mr-2 text-light">
-                    <input disabled id="atn" name="atn" type="number" value="10" class="input col parameter text-dark">
+                    <input id="atn" name="atn" type="number" value="10" class="input col parameter text-dark" required>
                 </div>
                 <div class="row no-gutters">
                     <img style="height: 25px; width: 25px; border-radius: 3px;" src="http://darksouls3.wdfiles.com/local--files/image-sets:menu-icons/endurance.png"></img>
                     <label for="end" class="col ml-1 my-1">Endurance</label>
                     <input disabled id="end" value="10" type="number" class="input col parameter base mr-2 text-light">
-                    <input disabled id="end" name="end" type="number" value="10" class="input col parameter text-dark">
+                    <input id="end" name="end" type="number" value="10" class="input col parameter text-dark" required>
                 </div>
                 <div class="row no-gutters">
                     <img style="height: 25px; width: 25px; border-radius: 3px;" src="http://darksouls3.wdfiles.com/local--files/image-sets:menu-icons/vitality.png"></img>
                     <label for="vit" class="col ml-1 my-1">Vitality</label>
                     <input disabled id="vitBase" value="10" type="number" class="input col parameter base mr-2 text-light">
-                    <input disabled id="vit" name="vit" type="number" value="10" class="input col parameter text-dark">
+                    <input id="vit" name="vit" type="number" value="10" class="input col parameter text-dark" required>
                 </div>
                 <div class="row no-gutters">
                     <img style="height: 25px; width: 25px; border-radius: 3px;" src="http://darksouls3.wdfiles.com/local--files/image-sets:menu-icons/strength.png"></img>
                     <label for="str" class="col ml-1 my-1">Strength</label>
                     <input disabled id="strBase" value="10" type="number" class="input col parameter base mr-2 text-light">
-                    <input disabled id="str" name="str" type="number" value="10" class="input col parameter text-dark">
+                    <input id="str" name="str" type="number" value="10" class="input col parameter text-dark" required>
                 </div>
                 <div class="row no-gutters">
                     <img style="height: 25px; width: 25px; border-radius: 3px;" src="http://darksouls3.wdfiles.com/local--files/image-sets:menu-icons/dexterity.png"></img>
                     <label for="dex" class="col ml-1 my-1">Dexterity</label>
                     <input disabled id="dexBase" value="10" type="number" class="input col parameter base mr-2 text-light">
-                    <input disabled id="dex" name="dex" type="number" value="10" class="input col parameter text-dark">
+                    <input id="dex" name="dex" type="number" value="10" class="input col parameter text-dark" required>
                 </div>
                 <div class="row no-gutters">
                     <img style="height: 25px; width: 25px; border-radius: 3px;" src="http://darksouls3.wdfiles.com/local--files/image-sets:menu-icons/intelligence.png"></img>
                     <label for="int" class="col ml-1 my-1">Intelligence</label>
                     <input disabled id="intBase" value="10" type="number" class="input col parameter base mr-2 text-light">
-                    <input disabled id="int" name="int" type="number" value="10" class="input col parameter text-dark">
+                    <input id="int" name="int" type="number" value="10" class="input col parameter text-dark" required>
                 </div>
                 <div class="row no-gutters">
                     <img style="height: 25px; width: 25px; border-radius: 3px;" src="http://darksouls3.wdfiles.com/local--files/image-sets:menu-icons/faith.png"></img>
                     <label for="fth" class="col ml-1 my-1">Faith</label>
                     <input disabled id="fthBase" value="10" type="number" class="input col parameter base mr-2 text-light">
-                    <input disabled id="fth" name="fth" type="number" value="10" class="input col parameter text-dark">
+                    <input id="fth" name="fth" type="number" value="10" class="input col parameter text-dark" required>
                 </div>
                 <div class="row no-gutters">
                     <img style="height: 25px; width: 25px; border-radius: 3px;" src="http://darksouls3.wdfiles.com/local--files/image-sets:menu-icons/luck.png"></img>
                     <label for="luck" class="col ml-1 my-1">Luck</label>
                     <input disabled id="luckBase" value="10" type="number" class="input col parameter base mr-2 text-light">
-                    <input disabled id="luck" name="luck" type="number" value="10" class="input col parameter text-dark">
+                    <input id="luck" name="luck" type="number" value="10" class="input col parameter text-dark" required>
                 </div>
                 <div class="row no-gutters">
                     <img style="height: 25px; width: 25px; border-radius: 3px;" src="http://darksouls3.wdfiles.com/local--files/image-sets:menu-icons/hollowing.png"></img>
                     <label for="hol" class="col ml-1 my-1">Hollowing</label>
-                    <input hidden id="holBase" value="10" type="number" class="input col parameter base mr-2 text-light">
-                    <input disabled id="hol" name="hol" type="number" value="0" class="input col parameter text-dark">
+                    <input disabled id="holBase" value="0" type="number" class="input col parameter base mr-2 text-light">
+                    <input id="hol" name="hol" type="number" value="0" class="input col parameter text-dark" required>
                 </div>
             </div>
             <div id="souls" class="mt-3">
