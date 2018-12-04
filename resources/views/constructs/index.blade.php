@@ -27,7 +27,7 @@
                 <form action="/constructs/{{ $construct->id }}" class="mr-5" method="POST">
                     @csrf
                     @method('DELETE')
-                    <button class="float-right delete" type="submit"><i class="text-danger fas fa-trash-alt m-2"></i></button>
+                    <button class="float-right delete" onclick="return confirm('Are you sure you want to delete this construct?')" type="submit"><i class="text-danger fas fa-trash-alt m-2"></i></button>
                 </form>
             </div>
         </div>

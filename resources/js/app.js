@@ -24,20 +24,20 @@ const app = new Vue({
         armors: {},
         weapons: {},
         rings: {},
-        selectHelmet: 'None',
-        selectChest: 'None',
-        selectHands: 'None',
-        selectLegs: 'None',
-        selectRing1: 'None',
-        selectRing2: 'None',
-        selectRing3: 'None',
-        selectRing4: 'None',
-        selectLH1: 'None',
-        selectLH2: 'None',
-        selectLH3: 'None',
-        selectRH1: 'None',
-        selectRH2: 'None',
-        selectRH3: 'None'
+        selectHelmet: 'null',
+        selectChest: 'null',
+        selectHands: 'null',
+        selectLegs: 'null',
+        selectRing1: 'null',
+        selectRing2: 'null',
+        selectRing3: 'null',
+        selectRing4: 'null',
+        selectLH1: 'null',
+        selectLH2: 'null',
+        selectLH3: 'null',
+        selectRH1: 'null',
+        selectRH2: 'null',
+        selectRH3: 'null'
     },
 
     created: function () {
@@ -64,7 +64,7 @@ const app = new Vue({
             }, 200);
         },
 
-        // Grabs all armor pieces for select forms
+        // Grabs all armor pieces for dropdown forms
         getArmors: function () {
             // Sets up proxy to bypass CORS
             const proxyurl = 'https://cors-anywhere.herokuapp.com/';
@@ -76,6 +76,7 @@ const app = new Vue({
             .catch(() => console.log("Can't access " + url + " response. Blocked by browser?"));
         },
 
+        // Grabs all weapons for dropdown forms
         getWeapons: function () {
             const proxyurl = 'https://cors-anywhere.herokuapp.com/';
             let url = 'https://mugenmonkey.com/api/v0/ds3_weapons?per_page=286';
@@ -86,6 +87,7 @@ const app = new Vue({
             .catch(() => console.log("Can't access " + url + " response. Blocked by browser?"));
         },
 
+        // Grabs all rings for dropdown forms
         getRings: function () {
             const proxyurl = 'https://cors-anywhere.herokuapp.com/';
             let url = 'https://mugenmonkey.com/api/v0/ds3_rings?per_page=116';
@@ -95,6 +97,5 @@ const app = new Vue({
             .then(contents => this.rings = contents.ds3_rings)
             .catch(() => console.log("Can't access " + url + " response. Blocked by browser?"));
         },
-
     }
 });

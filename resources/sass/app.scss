@@ -50,8 +50,13 @@ p {
 }
 
 .delete {
+    opacity: 1;
     background-color: #4444;
     border: none;
+}
+
+.delete:hover {
+    opacity: .5;
 }
 
 #main {
