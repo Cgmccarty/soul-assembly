@@ -56,15 +56,15 @@
                     <img style="height: 25px; width: 25px; border-radius: 3px;" src="http://darksouls3.wdfiles.com/local--files/image-sets:menu-icons/covenant.png"></img>
                     <label id="covLabel" for="cov_input" class="col ml-1 my-1">Covenant</label>
                     <select id="cov_input" class="input text-truncate text-dark" name="cov_input">
-                        <option value="warriorsofsunlight">Warriors of Sunlight</option>
-                        <option value="wayofblue">Way of Blue</option>
-                        <option value="bluesentinels">Blue Sentinels</option>
-                        <option value="bladesofthedarkmoon">Blades of the Darkmoon</option>
-                        <option value="rosariasfingers">Rosarias Fingers</option>
-                        <option value="moundmaker">Mound Maker</option>
-                        <option value="watchdogsoffarron">Watchdogs of Farron</option>
-                        <option value="aldrichfaithful">Aldrich Faithful</option>
-                        <option value="spearsofthechurch">Spears of the Church</option>
+                        <option value="Warriors of Sunlight">Warriors of Sunlight</option>
+                        <option value="Way of Blue">Way of Blue</option>
+                        <option value="Blue Sentinels">Blue Sentinels</option>
+                        <option value="Blades of the Darkmoon">Blades of the Darkmoon</option>
+                        <option value="Rosarias Fingers">Rosarias Fingers</option>
+                        <option value="Mound Maker">Mound Maker</option>
+                        <option value="Watchdogs of Farron">Watchdogs of Farron</option>
+                        <option value="Aldrich Faithful">Aldrich Faithful</option>
+                        <option value="Spears of the Church">Spears of the Church</option>
                     </select>
                 </div>
             </div>
@@ -80,7 +80,7 @@
                     <img style="height: 25px; width: 25px; border-radius: 3px;" src="http://darksouls3.wdfiles.com/local--files/image-sets:menu-icons/level.png"></img>
                     <label id="soulLabel" for="soul_input" class="col ml-1 my-1">Soul Level</label>
                     <input disabled id="soulBase" type="number" value="10" class="input col parameter base mr-2 text-light">
-                    <input id="soul_input" name="soul_input" type="number" value="10" class="input col parameter base text-light" required>
+                    <input id="soul_input" name="soul_input" type="number" value="10" class="input col parameter text-dark" required>
                 </div>
                 <div class="row no-gutters">
                     <img style="height: 25px; width: 25px; border-radius: 3px;" src="http://darksouls3.wdfiles.com/local--files/image-sets:menu-icons/vigor.png"></img>
@@ -147,7 +147,7 @@
                 <div class="row no-gutters">
                     <img style="height: 25px; width: 25px; border-radius: 3px;" src="http://darksouls3.wdfiles.com/local--files/image-sets:menu-icons/souls.png"></img>
                     <label for="soulsheld" class="col ml-1 my-1">Souls</label>
-                    <input disabled id="soulsheld" value="50000" type="number" class="input col base text-light">
+                    <input disabled id="soulsheld" value="0" type="number" class="input col base text-light">
                 </div>
                 <div class="row no-gutters">
                     <img style="height: 25px; width: 25px; border-radius: 3px;" src="http://darksouls3.wdfiles.com/local--files/image-sets:menu-icons/souls-required.png"></img>
@@ -308,10 +308,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="twohanded row no-gutters mt-2 pb-1">
-                    <input type="checkbox" name="2-handed" class="mr-1" id="2-handed" value=""></input>
+                <del><div class="twohanded row no-gutters mt-2 pb-1">
+                    <input disabled type="checkbox" name="2-handed" class="mr-1" id="2-handed" value=""></input>
                     <label for="2-handed">2-handed</label>
-                </div>
+                </div></del>
                 <div class="row no-gutters mt-2">
                     <label class="col ml-1 my-1">Active Effects</label>
                 </div>

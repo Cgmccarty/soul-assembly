@@ -1,4 +1,4 @@
-<button class="sticky-top row openbtn" id="openbtn" type="button" v-on:click="openNav"><i class="fas fa-bars"></i></button>
+<button class="sticky row openbtn" id="openbtn" type="button" v-on:click="openNav"><i class="fas fa-bars"></i></button>
 <div class="leftnav sticky-top" id="myLeftNav">
         <button class="row closebtn" type="button" v-on:click="closeNav"><i class="fas fa-minus"></i></button>
         <button class="row navbtn siteTitle" type="button"><a class="nav-link" href="/">Soul Assembly</a></button>

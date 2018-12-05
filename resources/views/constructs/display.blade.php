@@ -9,10 +9,10 @@
 <div class="row">
     <div class="col">
         <h3>About</h3>
-        <p>Created by: {{ $con->user->name }}</p>
-        <p>Class (Gender): {{ $con->class }} ({{ $con->gender }})</p>
-        <p>Burial Gift: {{ $con->gift }}</p>
-        <p>Covenant: {{ $con->covenant }}</p>
+        <p>Created by: <i>{{ $con->user->name }}</i></p>
+        <p>Class (Gender): <i>{{ $con->class }} ({{ $con->gender }})</i></p>
+        <p>Burial Gift: <i>{{ $con->gift }}</i></p>
+        <p>Covenant: <i>{{ $con->covenant }}</i></p>
     </div>
     <div class="col">
         <h3>Attributes</h3>

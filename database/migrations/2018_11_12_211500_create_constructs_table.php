@@ -21,7 +21,7 @@ class CreateConstructsTable extends Migration
             $table->enum('class', ['Knight', 'Mercenary', 'Warrior', 'Herald', 'Thief', 'Assassin', 'Sorcerer', 'Pyromancer', 'Cleric', 'Deprived']);
             $table->enum('gender', ['M', 'F']);
             $table->string('gift', 50)->nullable();
-            $table->enum('covenant', ['warriorsofsunlight', 'wayofblue', 'bluesentinels', 'bladesofthedarkmoon', 'rosariasfingers', 'moundmaker', 'watchdogsoffarron', 'aldrichfaithful', 'spearsofthechurch'])->nullable();
+            $table->enum('covenant', ["Warriors of Sunlight", "Way of Blue", "Blue Sentinels", "Blades of the Darkmoon", "Rosarias Fingers", "Mound Maker", "Watchdogs of Farron", "Aldrich Faithful", "Spears of the Church"])->nullable();
             $table->unsignedInteger('soul_level');
             $table->unsignedSmallInteger('Vgr');
             $table->unsignedSmallInteger('Atn');

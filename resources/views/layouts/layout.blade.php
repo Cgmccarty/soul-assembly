@@ -13,7 +13,7 @@
   </head>
   <body class="container">
 
-    <div id="app" class="m-3" v-cloak>
+    <div id="app" class="mt-5" v-cloak>
         @include('navigation')
 
         <div id="main">

@@ -19,16 +19,16 @@
                 <div class="row no-gutters">
                     <label id="classLabel" for="class_input" class="col my-1">Class</label>
                     <select id="class_input" class="input text-dark" name="class_input">
-                        <option value="Knight" @if($con->class === "Knight") selected='selected' @endif>Knight</option>
-                        <option value="Mercenary" @if($con->class === "Mercenary") selected='selected' @endif>Mercenary</option>
-                        <option value="Warrior" @if($con->class === "Warrior") selected='selected' @endif>Warrior</option>
-                        <option value="Herald" @if($con->class === "Herald") selected='selected' @endif>Herald</option>
-                        <option value="Thief" @if($con->class === "Thief") selected='selected' @endif>Thief</option>
-                        <option value="Assassin" @if($con->class === "Assassin") selected='selected' @endif>Assassin</option>
-                        <option value="Sorcerer" @if($con->class === "Sorcerer") selected='selected' @endif>Sorcerer</option>
-                        <option value="Pyromancer" @if($con->class === "Pyromancer") selected='selected' @endif>Pyromancer</option>
-                        <option value="Cleric" @if($con->class === "Cleric") selected='selected' @endif>Cleric</option>
-                        <option value="Deprived" @if($con->class === "Deprived") selected='selected' @endif>Deprived</option>
+                        <option value="Knight" @if($con->class === "Knight") selected = 'selected' @endif>Knight</option>
+                        <option value="Mercenary" @if($con->class === "Mercenary") selected = 'selected' @endif>Mercenary</option>
+                        <option value="Warrior" @if($con->class === "Warrior") selected = 'selected' @endif>Warrior</option>
+                        <option value="Herald" @if($con->class === "Herald") selected = 'selected' @endif>Herald</option>
+                        <option value="Thief" @if($con->class === "Thief") selected = 'selected' @endif>Thief</option>
+                        <option value="Assassin" @if($con->class === "Assassin") selected = 'selected' @endif>Assassin</option>
+                        <option value="Sorcerer" @if($con->class === "Sorcerer") selected = 'selected' @endif>Sorcerer</option>
+                        <option value="Pyromancer" @if($con->class === "Pyromancer") selected = 'selected' @endif>Pyromancer</option>
+                        <option value="Cleric" @if($con->class === "Cleric") selected = 'selected' @endif>Cleric</option>
+                        <option value="Deprived" @if($con->class === "Deprived") selected = 'selected' @endif>Deprived</option>
                     </select>
                 </div>
                 <div class="row no-gutters">
@@ -41,31 +41,31 @@
                 <div class="row no-gutters">
                     <label id="giftLabel" for="gift_input" class="col my-1">Gift</label>
                     <select id="gift_input" class="input text-dark" name="gift_input">
-                        <option value="null">None</option>
-                        <option value="lifering">Life Ring</option>
-                        <option value="divineblessing">Divine Blessing</option>
-                        <option value="hiddenblessing">Hidden Blessing</option>
-                        <option value="blackfirebomb">Black Firebomb</option>
-                        <option value="firegem">Fire Gem</option>
-                        <option value="sovereignlesssoul">Sovereignless Soul</option>
-                        <option value="goldcoin">Gold Coin</option>
-                        <option value="crackedredeyeorb">Cracked Red Eye Orb</option>
-                        <option value="youngwhitebranch">Young White Branch</option>
+                        <option value="null" @if($con->gift === "null") selected = 'selected' @endif>None</option>
+                        <option value="Life Ring" @if($con->gift === "Life Ring") selected = 'selected' @endif>Life Ring</option>
+                        <option value="Divine Blessing" @if($con->gift === "Divine Blessing") selected = 'selected' @endif>Divine Blessing</option>
+                        <option value="Hidden Blessing" @if($con->gift === "Hidden Blessing") selected = 'selected' @endif>Hidden Blessing</option>
+                        <option value="Black Firebomb" @if($con->gift === "Black Firebomb") selected = 'selected' @endif>Black Firebomb</option>
+                        <option value="Fire Gem" @if($con->gift === "Fire Gem") selected = 'selected' @endif>Fire Gem</option>
+                        <option value="Sovereignless Soul" @if($con->gift === "Sovereignless Soul") selected = 'selected' @endif>Sovereignless Soul</option>
+                        <option value="Gold Coin" @if($con->gift === "Gold Coin") selected = 'selected' @endif>Gold Coin</option>
+                        <option value="Cracked Red Eye Orb" @if($con->gift === "Cracked Red Eye Orb") selected = 'selected' @endif>Cracked Red Eye Orb</option>
+                        <option value="Young White Branch" @if($con->gift === "Young White Branch") selected = 'selected' @endif>Young White Branch</option>
                     </select>
                 </div>
                 <div class="row no-gutters">
                     <img style="height: 25px; width: 25px; border-radius: 3px;" src="http://darksouls3.wdfiles.com/local--files/image-sets:menu-icons/covenant.png"></img>
                     <label id="covLabel" for="cov_input" class="col ml-1 my-1">Covenant</label>
                     <select id="cov_input" class="input text-truncate text-dark" name="cov_input">
-                        <option value="warriorsofsunlight" @if($con->covenant === "warriorsofsunlight") selected = 'selected' @endif>Warriors of Sunlight</option>
-                        <option value="wayofblue" @if($con->covenant === "wayofblue") selected = 'selected' @endif>Way of Blue</option>
-                        <option value="bluesentinels" @if($con->covenant === "bluesentinels") selected = 'selected' @endif>Blue Sentinels</option>
-                        <option value="bladesofthedarkmoon" @if($con->covenant === "bladesofthedarkmoon") selected = 'selected' @endif>Blades of the Darkmoon</option>
-                        <option value="rosariasfingers" @if($con->covenant === "rosariasfingers") selected = 'selected' @endif>Rosarias Fingers</option>
-                        <option value="moundmaker" @if($con->covenant === "moundmaker") selected = 'selected' @endif>Mound Maker</option>
-                        <option value="watchdogsoffarron" @if($con->covenant === "watchdogsoffarron") selected = 'selected' @endif>Watchdogs of Farron</option>
-                        <option value="aldrichfaithful" @if($con->covenant === "aldrichfaithful") selected = 'selected' @endif>Aldrich Faithful</option>
-                        <option value="spearsofthechurch" @if($con->covenant === "spearsofthechurch") selected = 'selected' @endif>Spears of the Church</option>
+                        <option value="Warriors of Sunlight" @if($con->covenant === "Warriors of Sunlight") selected = 'selected' @endif>Warriors of Sunlight</option>
+                        <option value="Way of Blue" @if($con->covenant === "Way of Blue") selected = 'selected' @endif>Way of Blue</option>
+                        <option value="Blue Sentinels" @if($con->covenant === "Blue Sentinels") selected = 'selected' @endif>Blue Sentinels</option>
+                        <option value="Blades of the Darkmoon" @if($con->covenant === "Blades of the Darkmoon") selected = 'selected' @endif>Blades of the Darkmoon</option>
+                        <option value="Rosarias Fingers" @if($con->covenant === "Rosarias Fingers") selected = 'selected' @endif>Rosarias Fingers</option>
+                        <option value="Mound Maker" @if($con->covenant === "Mound Maker") selected = 'selected' @endif>Mound Maker</option>
+                        <option value="Watchdogs of Farron" @if($con->covenant === "Watchdogs of Farron") selected = 'selected' @endif>Watchdogs of Farron</option>
+                        <option value="Aldrich Faithful" @if($con->covenant === "Aldrich Faithful") selected = 'selected' @endif>Aldrich Faithful</option>
+                        <option value="Spears of the Church" @if($con->covenant === "Spears of the Church") selected = 'selected' @endif>Spears of the Church</option>
                     </select>
                 </div>
             </div>
@@ -148,7 +148,7 @@
                 <div class="row no-gutters">
                     <img style="height: 25px; width: 25px; border-radius: 3px;" src="http://darksouls3.wdfiles.com/local--files/image-sets:menu-icons/souls.png"></img>
                     <label for="soulsheld" class="col ml-1 my-1">Souls</label>
-                    <input disabled id="soulsheld" value="50000" type="number" class="input col base text-light">
+                    <input disabled id="soulsheld" value="0" type="number" class="input col base text-light">
                 </div>
                 <div class="row no-gutters">
                     <img style="height: 25px; width: 25px; border-radius: 3px;" src="http://darksouls3.wdfiles.com/local--files/image-sets:menu-icons/souls-required.png"></img>
@@ -309,10 +309,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="twohanded row no-gutters mt-2 pb-1">
-                    <input type="checkbox" name="2-handed" class="mr-1" id="2-handed" value=""></input>
+                <del><div class="twohanded row no-gutters mt-2 pb-1">
+                    <input disabled type="checkbox" name="2-handed" class="mr-1" id="2-handed" value=""></input>
                     <label for="2-handed">2-handed</label>
-                </div>
+                </div></del>
                 <div class="row no-gutters mt-2">
                     <label class="col ml-1 my-1">Active Effects</label>
                 </div>

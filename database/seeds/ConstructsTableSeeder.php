@@ -24,7 +24,7 @@ class ConstructsTableSeeder extends Seeder
         $build1->class = 'Knight';
         $build1->gender = 'M';
         $build1->gift = 'Fire Gem';
-        $build1->covenant = 'warriorsofsunlight';
+        $build1->covenant = "Warriors of Sunlight";
         $build1->soul_level = 120;
         $build1->Vgr = 40;
         $build1->Atn = 10;
@@ -55,7 +55,7 @@ class ConstructsTableSeeder extends Seeder
         $build2->class = 'Sorcerer';
         $build2->gender = 'M';
         $build2->gift = 'Black Firebomb';
-        $build2->covenant = 'moundmaker';
+        $build2->covenant = "Mound Maker";
         $build2->soul_level = 150;
         $build2->Vgr = 30;
         $build2->Atn = 30;
