@@ -17,11 +17,15 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
+.leftnav {
+    background: url(https://cdnb.artstation.com/p/assets/images/images/005/684/301/original/egor-egorov-output-sweuij.gif?1493004504) no-repeat;
+    background-size: 500px 500px;
+    background-position: -130px 230px;
+}
+
 .container, body {
-  // background: url(https://cdnb.artstation.com/p/assets/images/images/005/684/301/original/egor-egorov-output-sweuij.gif?1493004504) no-repeat -130px 250px;
-  background-size: 500px 500px;
   background-color: #000;
-  background-position: absolute;
+  background-position: relative;
   font-family: 'Cormorant SC', serif;
   color: #FFF;
   text-transform: uppercase;
@@ -227,9 +231,18 @@ img.col {
     border-style: ridge groove ridge;
     background-color: #444;
     transition: 0.1s;
-    position: absolute;
+    position: fixed;
+    z-index: 1;
     top: 0;
     left: 15px;
+}
+
+.divide-bottom {
+    border-bottom: 3px #9E937B ridge;
+}
+
+.divide-left {
+    border-left: 3px #9E937B groove;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */

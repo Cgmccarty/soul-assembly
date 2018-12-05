@@ -27,7 +27,7 @@
                         <option value="Sorcerer">Sorcerer</option>
                         <option value="Pyromancer">Pyromancer</option>
                         <option value="Cleric">Cleric</option>
-                        <option value="Deprived">Deprived</option>
+                        <option selected value="Deprived">Deprived</option>
                     </select>
                 </div>
                 <div class="row no-gutters">
@@ -79,8 +79,8 @@
                 <div class="row no-gutters">
                     <img style="height: 25px; width: 25px; border-radius: 3px;" src="http://darksouls3.wdfiles.com/local--files/image-sets:menu-icons/level.png"></img>
                     <label id="soulLabel" for="soul_input" class="col ml-1 my-1">Soul Level</label>
-                    <input disabled id="soulBase" type="number" value="10" class="input col parameter base mr-2 text-light">
-                    <input id="soul_input" name="soul_input" type="number" value="10" class="input col parameter text-dark" required>
+                    <input disabled id="soulBase" type="number" value="1" class="input col parameter base mr-2 text-light">
+                    <input id="soul_input" name="soul_input" type="number" value="1" class="input col parameter text-dark" required>
                 </div>
                 <div class="row no-gutters">
                     <img style="height: 25px; width: 25px; border-radius: 3px;" src="http://darksouls3.wdfiles.com/local--files/image-sets:menu-icons/vigor.png"></img>
@@ -152,7 +152,7 @@
                 <div class="row no-gutters">
                     <img style="height: 25px; width: 25px; border-radius: 3px;" src="http://darksouls3.wdfiles.com/local--files/image-sets:menu-icons/souls-required.png"></img>
                     <label for="soulsneeded" class="col ml-1 my-1">Required Souls</label>
-                    <input disabled id="soulsneeded" value="50000" type="number" class="input col base text-light">
+                    <input disabled id="soulsneeded" value="0" type="number" class="input col base text-light">
                 </div>
             </div>
         </div>
@@ -326,37 +326,37 @@
                 <div class="row no-gutters">
                     <img style="height: 25px; width: 25px; border-radius: 3px;" src="http://darksouls3.wdfiles.com/local--files/image-sets:menu-icons/hp.png"></img>
                     <label class="col ml-1 my-1">HP</label>
-                    <input disabled type="number" value="10" class="input col text-right base text-light">
+                    <input disabled type="number" value="403" class="input col text-right base text-light">
                 </div>
                 <div class="row no-gutters">
                     <img style="height: 25px; width: 25px; border-radius: 3px;" src="http://darksouls3.wdfiles.com/local--files/image-sets:menu-icons/fp.png"></img>
                     <label class="col ml-1 my-1">FP</label>
-                    <input disabled type="number" value="10" class="input col text-right base text-light">
+                    <input disabled type="number" value="93" class="input col text-right base text-light">
                 </div>
                 <div class="row no-gutters">
                     <img style="height: 25px; width: 25px; border-radius: 3px;" src="http://darksouls3.wdfiles.com/local--files/image-sets:menu-icons/stamina.png"></img>
                     <label class="col ml-1 my-1">Stamina</label>
-                    <input disabled type="number" value="10" class="input col text-right base text-light">
+                    <input disabled type="number" value="94" class="input col text-right base text-light">
                 </div>
                 <div class="row no-gutters">
                     <img style="height: 25px; width: 25px; border-radius: 3px;" src="http://darksouls3.wdfiles.com/local--files/image-sets:menu-icons/equip-load.png"></img>
                     <label class="col ml-1 my-1">Equip Load</label>
-                    <input disabled type="number" value="10" class="input col text-right base text-light">
+                    <input disabled type="number" value="0.0" class="input col text-right base text-light">
                 </div>
                 <div class="row no-gutters">
                     <img style="height: 25px; width: 25px; border-radius: 3px;" src="http://darksouls3.wdfiles.com/local--files/image-sets:menu-icons/weight-ratio.png"></img>
                     <label class="col ml-1 my-1">Weight Ratio</label>
-                    <input disabled type="number" value="10" class="input col text-right base text-light">
+                    <input disabled type="percentage" value="0.0%" class="input col text-right base text-light">
                 </div>
                 <div class="row no-gutters">
                     <img style="height: 25px; width: 25px; border-radius: 3px;" src="http://darksouls3.wdfiles.com/local--files/image-sets:menu-icons/poise.png"></img>
                     <label class="col ml-1 my-1">Poise</label>
-                    <input disabled type="number" value="10" class="input col text-right base text-light">
+                    <input disabled type="number" value="0.00" class="input col text-right base text-light">
                 </div>
                 <div class="row no-gutters">
                     <img style="height: 25px; width: 25px; border-radius: 3px;" src="http://darksouls3.wdfiles.com/local--files/image-sets:menu-icons/item-discovery.png"></img>
                     <label class="col ml-1 my-1">Item Discovery</label>
-                    <input disabled type="number" value="10" class="input col text-right base text-light">
+                    <input disabled type="number" value="110" class="input col text-right base text-light">
                 </div>
             </div>
             <div id="defense" class="mt-2">
@@ -369,50 +369,50 @@
                 <div class="row no-gutters">
                     <img style="height: 25px; width: 25px; border-radius: 3px;" src="http://darksouls3.wdfiles.com/local--files/image-sets:menu-icons/physical-def.png"></img>
                     <label class="col ml-1 my-1">Physical</label>
-                    <input disabled type="number" value="10" class="input parameter text-right base text-light mr-2">
-                    <input disabled type="number" value="10" class="input parameter text-right base text-light">
+                    <input disabled type="number" value="48" class="input parameter text-right base text-light mr-2">
+                    <input disabled type="number" value="0.000" class="input parameter text-right base text-light">
                 </div>
                 <div class="row no-gutters">
                     <img style="height: 25px; width: 25px; border-radius: 3px;" src="http://darksouls3.wdfiles.com/local--files/image-sets:menu-icons/strike-def.png"></img>
                     <label class="col ml-1 my-1">VS Strike</label>
-                    <input disabled type="number" value="10" class="input parameter text-right base text-light mr-2">
-                    <input disabled type="number" value="10" class="input parameter text-right base text-light">
+                    <input disabled type="number" value="48" class="input parameter text-right base text-light mr-2">
+                    <input disabled type="number" value="0.000" class="input parameter text-right base text-light">
                 </div>
                 <div class="row no-gutters">
                     <img style="height: 25px; width: 25px; border-radius: 3px;" src="http://darksouls3.wdfiles.com/local--files/image-sets:menu-icons/slash-def.png"></img>
                     <label class="col ml-1 my-1">VS Slash</label>
-                    <input disabled type="number" value="10" class="input parameter text-right base text-light mr-2">
-                    <input disabled type="number" value="10" class="input parameter text-right base text-light">
+                    <input disabled type="number" value="48" class="input parameter text-right base text-light mr-2">
+                    <input disabled type="number" value="0.000" class="input parameter text-right base text-light">
                 </div>
                 <div class="row no-gutters">
                     <img style="height: 25px; width: 25px; border-radius: 3px;" src="http://darksouls3.wdfiles.com/local--files/image-sets:menu-icons/thrust-def.png"></img>
                     <label class="col ml-1 my-1">VS Thrust</label>
-                    <input disabled type="number" value="10" class="input parameter text-right base text-light mr-2">
-                    <input disabled type="number" value="10" class="input parameter text-right base text-light">
+                    <input disabled type="number" value="48" class="input parameter text-right base text-light mr-2">
+                    <input disabled type="number" value="0.000" class="input parameter text-right base text-light">
                 </div>
                 <div class="row no-gutters">
                     <img style="height: 25px; width: 25px; border-radius: 3px;" src="http://darksouls3.wdfiles.com/local--files/image-sets:menu-icons/magic-def.png"></img>
                     <label class="col ml-1 my-1">Magic</label>
-                    <input disabled type="number" value="10" class="input parameter text-right base text-light mr-2">
-                    <input disabled type="number" value="10" class="input parameter text-right base text-light">
+                    <input disabled type="number" value="48" class="input parameter text-right base text-light mr-2">
+                    <input disabled type="number" value="0.000" class="input parameter text-right base text-light">
                 </div>
                 <div class="row no-gutters">
                     <img style="height: 25px; width: 25px; border-radius: 3px;" src="http://darksouls3.wdfiles.com/local--files/image-sets:menu-icons/fire-def.png"></img>
                     <label class="col ml-1 my-1">Fire</label>
-                    <input disabled type="number" value="10" class="input parameter text-right base text-light mr-2">
-                    <input disabled type="number" value="10" class="input parameter text-right base text-light">
+                    <input disabled type="number" value="48" class="input parameter text-right base text-light mr-2">
+                    <input disabled type="number" value="0.000" class="input parameter text-right base text-light">
                 </div>
                 <div class="row no-gutters">
                     <img style="height: 25px; width: 25px; border-radius: 3px;" src="http://darksouls3.wdfiles.com/local--files/image-sets:menu-icons/lightning-def.png"></img>
                     <label class="col ml-1 my-1">Lightning</label>
-                    <input disabled type="number" value="10" class="input parameter text-right base text-light mr-2">
-                    <input disabled type="number" value="10" class="input parameter text-right base text-light">
+                    <input disabled type="number" value="48" class="input parameter text-right base text-light mr-2">
+                    <input disabled type="number" value="0.000" class="input parameter text-right base text-light">
                 </div>
                 <div class="row no-gutters">
                     <img style="height: 25px; width: 25px; border-radius: 3px;" src="http://darksouls3.wdfiles.com/local--files/image-sets:menu-icons/dark-def.png"></img>
                     <label class="col ml-1 my-1">Dark</label>
-                    <input disabled type="number" value="10" class="input parameter text-right base text-light mr-2">
-                    <input disabled type="number" value="10" class="input parameter text-right base text-light">
+                    <input disabled type="number" value="48" class="input parameter text-right base text-light mr-2">
+                    <input disabled type="number" value="0.000" class="input parameter text-right base text-light">
                 </div>
             </div>
             <div id="resistances" class="mt-2">
@@ -425,30 +425,29 @@
                 <div class="row no-gutters">
                     <img style="height: 25px; width: 25px; border-radius: 3px;" src="http://darksouls3.wdfiles.com/local--files/image-sets:menu-icons/bleed.png"></img>
                     <label class="col ml-1 my-1">Bleed</label>
-                    <input disabled type="number" value="10" class="input parameter text-right base text-light mr-2">
-                    <input disabled type="number" value="10" class="input parameter text-right base text-light">
+                    <input disabled type="number" value="107" class="input parameter text-right base text-light mr-2">
+                    <input disabled type="number" value="0" class="input parameter text-right base text-light">
                 </div>
                 <div class="row no-gutters">
                     <img style="height: 25px; width: 25px; border-radius: 3px;" src="http://darksouls3.wdfiles.com/local--files/image-sets:menu-icons/poison.png"></img>
                     <label class="col ml-1 my-1">Poison</label>
-                    <input disabled type="number" value="10" class="input parameter text-right base text-light mr-2">
-                    <input disabled type="number" value="10" class="input parameter text-right base text-light">
+                    <input disabled type="number" value="107" class="input parameter text-right base text-light mr-2">
+                    <input disabled type="number" value="0" class="input parameter text-right base text-light">
                 </div>
                 <div class="row no-gutters">
                     <img style="height: 25px; width: 25px; border-radius: 3px;" src="http://darksouls3.wdfiles.com/local--files/image-sets:menu-icons/frost.png"></img>
                     <label class="col ml-1 my-1">Frost</label>
-                    <input disabled type="number" value="10" class="input parameter text-right base text-light mr-2">
-                    <input disabled type="number" value="10" class="input parameter text-right base text-light">
+                    <input disabled type="number" value="107" class="input parameter text-right base text-light mr-2">
+                    <input disabled type="number" value="0" class="input parameter text-right base text-light">
                 </div>
                 <div class="row no-gutters">
                     <img style="height: 25px; width: 25px; border-radius: 3px;" src="http://darksouls3.wdfiles.com/local--files/image-sets:menu-icons/curse.png"></img>
                     <label class="col ml-1 my-1">Curse</label>
-                    <input disabled type="number" value="10" class="input parameter text-right base text-light mr-2">
-                    <input disabled type="number" value="10" class="input parameter text-right base text-light">
+                    <input disabled type="number" value="107" class="input parameter text-right base text-light mr-2">
+                    <input disabled type="number" value="0" class="input parameter text-right base text-light">
                 </div>
             </div>
         </div>
-
     </div>
     <div class="d-flex justify-content-center mt-3 mb-5">
         <button class="navbtn" type="submit">Assemble</button>

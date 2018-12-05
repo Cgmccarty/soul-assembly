@@ -45,8 +45,11 @@ class ConstructsTableSeeder extends Seeder
         $build1->ring3 = 'Chloranthy Ring';
         $build1->ring4 = 'Ring of Steel Protection';
         $build1->rh1 = 'Lothric Knight Sword';
+        $build1->rh2 = 'null';
+        $build1->rh3 = 'null';
         $build1->lh1 = 'Lothric Knight Shield';
         $build1->lh2 = 'Pyromancy Flame';
+        $build1->lh3 = 'null';
         $build1->save();
 
         $build2 = new \App\Construct;
@@ -76,7 +79,11 @@ class ConstructsTableSeeder extends Seeder
         $build2->ring3 = 'Sage Ring';
         $build2->ring4 = 'Lingering Dragoncrest Ring';
         $build2->rh1 = 'Moonlight Greatsword';
+        $build2->rh2 = 'null';
+        $build2->rh3 = 'null';
         $build2->lh1 = 'Sorcerer\'s Catalyst';
+        $build2->lh2 = 'null';
+        $build2->lh3 = 'null';
         $build2->save();
     }
 }

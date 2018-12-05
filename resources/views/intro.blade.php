@@ -5,10 +5,10 @@
 @endsection
 
 @section('content')
-    <p class="mt-4">The Soul Assembly is for Dark Souls 3 players who want to plan out their next New Game. If you have ever played
-    Dark Souls before, you know it is daunting when you don't know where to start. Even the lowliest enemies can easily
-    dispatch you, but having a plan is a great first step when starting a new game. With Soul Assembly, you can plan your
-    attributes and your equipment to match your optimal play style, or even learning a new one!</p>
+    <p class="mt-4">The Soul Assembly is a Dark Souls 3 character planner for players who want to plan out their next New Game. If you
+    have ever played Dark Souls before, you know it can be daunting when you don't know where to start. Even the lowliest enemies
+    can easily dispatch you, but having a plan is a great first step to avoiding this. With Soul Assembly, you can plan your
+    attributes and your equipment to match your optimal play style, or even for learning a new one!</p>
 
     <h3 class="mt-5">New Players</h3>
 
@@ -16,10 +16,10 @@
     some important game concepts.</p>
 
     <p>Dark Souls 3 is an action RPG set in the fictional land of Lothric. Everyone in Lothric is undead, meaning they never truly
-    die (sounds kind of like Hell to me). Undead and the world they live in are kept alive by the First Flame. This is the driving
+    die (sounds kind of like Hell to me). Undead and the world they live in are kept alive by the First Flame, the driving
     force behind all life in Lothric. Eventually, though, this flame fades, and begins to die out. When that point comes, a chosen
-    undead must reunite the Lords of Cinder so that they may rekindle the First Flame for longevity. Well, as it turns out, rekindling
-    the first flame is kind of traumatic, and the lords don't want to do it anymore. So, it's your job to find them, kill them, and
+    undead must reunite the Lords of Cinder so that they may rekindle the First Flame for longevity. As it turns out, rekindling
+    the first flame is kind of traumatic, and the lords don't want to do it anymore. It is your job to find them, kill them, and
     reunite them by decorating their thrones with their body parts. Sounds easy enough, right?</p>
 
     <p>You should know that this game is designed for you to die many times. If you play methodically, it is pretty easy to avoid. It

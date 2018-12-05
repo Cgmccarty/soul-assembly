@@ -9,7 +9,8 @@
 @if (Auth::user()->constructs->count() == 0)
 
 <p>You currently have no constructs to display.</p>
-<p>Please create one by opening the menu and clicking 'New Construct'!</p>
+<p>Please create one by clicking below</p>
+<button class="row navbtn mt-3" type="button"><a class="nav-link" href="/constructs/create">New Construct</a></button>
 
 @else
 
